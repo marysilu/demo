@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration page</title>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'><link rel="stylesheet" href="{%static 'styles/register.css' %}">
+
+</head>
+<body>
+<h1 align="center">Registration</h1>
+
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form action=" " method="post">
+            {% csrf_token %}
+                <div class="screen__background">
+	    		    <span class="screen__background__shape screen__background__shape4"></span>
+		    	    <span class="screen__background__shape screen__background__shape3"></span>
+			        <span class="screen__background__shape screen__background__shape2"></span>
+			        <span class="screen__background__shape screen__background__shape1"></span>
+		        </div>
+                <div class="register__field">
+                    <input type="text" name="fname" class="register__input" placeholder="Enter first name">
+                </div>
+                <div class="register__field">
+                    <input type="text" name="lname" class="register__input" placeholder="Enter last name">
+                </div>
+                <div class="register__field">
+                    <input type="email" name="email" class="register__input" placeholder="Enter email">
+                </div>
+                <div class="register__field">
+                    <input type="text" name="username" class="register__input" placeholder="Enter user name">
+                </div>
+                <div class="register__field">
+                    <input type="password" name="password" class="register__input" placeholder="Enter password">
+                </div>
+                <div class="register__field">
+                    <input type="password" name="cpassword" class="register__input" placeholder="Confirm password">
+                </div>
+                <div class="register__submit">
+                    <input type="submit" class="register__submit">
+                    <input type="reset" class="register__submit">
+                </div>
+
+                {% if messages %}
+                    {% for i in messages %}
+                        {{i}}
+                    {% endfor %}
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
