@@ -1,0 +1,20 @@
+
+
+<!-- define Generic-detailview-->
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="card-body">
+    <div class="card-title">{{task1.name}}</div>
+        <p>{{task1.priority}}</p>
+        <p>{{task1.date}}</p>
+        <a class="btn btn-danger" href="{% url 'delete' task1.id%}">Done</a>
+<!--        <a class="btn btn-danger" href="{% url 'cbvupdate' task1.id%}">Update</a>-->
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+

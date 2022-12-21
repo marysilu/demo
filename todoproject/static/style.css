@@ -1,0 +1,13 @@
+.banner{
+background-color:orchid;
+height:150px;
+margin-bottom:65px;
+
+}
+
+.banner-text{
+top:44px;
+left:45%;
+position:absolute;
+transform:transform;
+}

@@ -1,0 +1,16 @@
+<!-- define Generic-updateview-->
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="col-md-8">
+<div class="card-header">
+    <div class="card-title">{{task1.name}}</div>
+        <form method="post">
+           {% csrf_token %}
+           {{form.as_p}}
+           <button class= "btn btn-danger" type="submit">Modify</button>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %}
